@@ -46,7 +46,7 @@ let newApi = api.create()
 api(url, data)
 /**
 *上下等价
-*可以通过修改api.default.method或者创建时候传{method: 'post'}
+*可以通过修改api.default.method或者创建时候传{method: 'post'}来改变默认方式
 */
 api.get(url,data)
 //get请求可以直接拼在链接上
@@ -81,7 +81,7 @@ api.interceptors.response.use(function (config){
     Promise.reject(error)
 })
 api.interceptors.request.use(function (config){
-  //返回的是
+  //返回的是request的参数
   console.log(config)
   wx.showLoading({
     title: '加载内容'
