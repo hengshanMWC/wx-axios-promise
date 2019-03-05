@@ -4,6 +4,7 @@
 * 默认将小程序的api封装成Promise，通过降级，兼容低版本手机系统
 ### 使用方法
 npm i wx-axios-promise -S
+
 wx-axios-promise>index.js(入口文件)
 ```
 /**
