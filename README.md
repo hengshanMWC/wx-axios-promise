@@ -3,6 +3,7 @@
 * 提供和axios相似体验，支持默认参数配置，拦截功能，和create创建新的对象
 * 默认将小程序的api封装成Promise，通过降级，兼容低版本手机系统
 ### 使用方法
+npm i wx-axios-promise -S
 wx-axios-promise>index.js(入口文件)
 ```
 /**
