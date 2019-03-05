@@ -90,3 +90,10 @@ api.interceptors.request.use(function (config){
     Promise.reject(error)
 })
 ```
+wx全Promise
+```
+api.wx.chooseImage()
+.then( res => api.wx.uploadFile())
+.then()
+```
+当然，如果你并不需要这个功能，你也可以在创建的时候设置第二个参数为false
