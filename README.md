@@ -11,9 +11,7 @@ wx-axios-promise>index.js(入口文件)
  * options：Object,默认Object，设置默认的request参数
  * proxt：Boolean，默认为true，是否将wx的所有api都封装成Promise
  */
-export default function (ptions, proxy) {
-  return Abi(ptions, proxy)
-}
+export default function Api(options = {}, proxy = true) {
 ```
 引入文件即可使用
 ```
