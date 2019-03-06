@@ -5,6 +5,8 @@
 ### 使用方法
 npm i wx-axios-promise -S
 
+[小程序 npm 支持](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html?search-key=npm)
+
 wx-axios-promise>index.js(入口文件)
 ```
 /**
@@ -13,9 +15,9 @@ wx-axios-promise>index.js(入口文件)
  */
 export default function Api(options = {}, proxy = true) {
 ```
-引入文件即可使用
+
 ```
-import Abi from 'wx-axios-promise/index.js'
+import Abi from 'wx-axios-promise'
 let api = Abi()
 ```
 传递相关配置来创建请求(以下参数为默认)
@@ -78,16 +80,16 @@ api.interceptors.response.use(function (config){
   //接口||wx.接口
   return config.data || config
 }, function(error){
-    Promise.reject(error)
+    return error
 })
 api.interceptors.request.use(function (config){
-  //返回的是request的参数
+  //返回的是和wx.request相关的参数
   console.log(config)
   wx.showLoading({
     title: '加载内容'
   })
 }, function(error){
-    Promise.reject(error)
+    return error
 })
 ```
 wx全Promise
