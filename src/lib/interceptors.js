@@ -1,4 +1,4 @@
-export default function interceptors(){
+export default function interceptors() {
   return {
     /**
      * 还原拦截
