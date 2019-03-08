@@ -25,7 +25,7 @@ let api = Abi()
 //详情可参考wx.request
 let api = Abi({
     url: '',//默认的接口后缀
-    method: 'get',//默认的接口方式
+    method: 'get',//默认的HTTP 请求方法
     dataType: 'json',//默认的返回类型
     responseType: 'text',
     header: {
@@ -45,24 +45,23 @@ let newApi = api.create()
 *如果你设置了默认的url。会自动配置 默认url + url
 *如果你的url是http://或者https://开头，那么不会添加默认url
 */
+//多种请求方式
 api(url, data)
-/**
-*上下等价
-*可以通过修改api.default.method或者创建时候传{method: 'post'}来改变默认方式
-*/
-api.get(url,data)
-//get请求可以直接拼在链接上
-api(url + '?name=mwc&height=179')
-//但如果你想设置之外的参数
+api(SERVER[api], apiData)
+api.get(SERVER[api], apiData)
+api(SERVER.URL + SERVER[api], apiData)
+api(`${SERVER[api]}?page=${apiData.page}&count=${apiData.count}`)
 api({
-    url: '',
-    method: 'get',
-    dataType: 'json',
-    responseType: 'text',
-    header: {
-      'content-type': "application/json"
-    }
+   url: SERVER[api],
+   data: apiData,
+   <!--method: 'get',-->
+   <!--dataType: 'json',-->
+   <!--responseType: 'text',-->
+   <!--header: {-->
+   <!--    content-type': "application/json"-->
+   <!--}-->
 })
+
 api.post(url, data)
 支持
 'get',

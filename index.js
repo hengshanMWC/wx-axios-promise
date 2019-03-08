@@ -31,7 +31,7 @@ export default function Api(options = {}, proxy = true) {
     if (proxy)
       cp.make(obj, 'wx', key => (url, data) => this.method({ url, data, api: key }));
     obj.options(options)
-    obj.create = api;
+    obj.create = Api;
     return obj
   }
   api.options = function (options) {
