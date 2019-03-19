@@ -23,10 +23,10 @@ export default class CopyProxy {
    * 而definProperty触发get是没有key返回的。所以一开始就需要循环出所有的key来劫持
    * */
   make(obj = {}, soil, fn) {
-    if (typeof Proxy !== 'undefined') {
-      return this.defineProperty(obj, soil, fn)
-    } else {
+    if (typeof Proxy === 'function') {
       return this.proxy(obj, soil, fn)
+    } else {
+      return this.defineProperty(obj, soil, fn)
     }
   }
   proxy(obj, soil, fn) {
