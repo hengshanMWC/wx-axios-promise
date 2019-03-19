@@ -1,6 +1,6 @@
 {
   "name": "wx-axios-promise",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "小程序的request库，封装了wx的所有api为Promise，用法和axios类似",
   "main": "index.js",
   "directories": {
