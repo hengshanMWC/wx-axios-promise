@@ -9,14 +9,6 @@ npm i wx-axios-promise -S
 
 [小程序代码片段测试](https://developers.weixin.qq.com/s/GSiAP0mj787V)
 
-wx-axios-promise>index.js(入口文件)
-```
-/**
- * options：Object,默认Object，设置默认的request参数
- * proxt：Boolean，默认为true，是否将wx的所有api都封装成Promise
- */
-export default function Api(options = {}, proxy = true) {
-```
 
 ```
 import Abi from 'wx-axios-promise'
