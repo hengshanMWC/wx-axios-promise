@@ -7,7 +7,7 @@ npm i wx-axios-promise -S
 
 [小程序 npm 支持](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html?search-key=npm)
 
-[小程序代码片段测试](https://developers.weixin.qq.com/s/gMCSfImN7w6X)
+[小程序代码片段测试](https://developers.weixin.qq.com/s/GSiAP0mj787V)
 
 wx-axios-promise>index.js(入口文件)
 ```
