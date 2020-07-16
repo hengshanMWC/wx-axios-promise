@@ -2,17 +2,24 @@
   "name": "wx-axios-promise",
   "version": "2.3.3",
   "description": "小程序的request库，封装了wx的所有api为Promise，用法和axios类似",
-  "main": "index.js",
+  "main": "dist/wxAxiosPromise.cjs.min.js",
+  "model": "dist/wxAxiosPromise.cjs.min.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hengshanMWC/wx-axios-promise.git"
   },
+  "files": [
+    "package.json",
+    "package-lock.json",
+    "dist/"
+  ],
   "keywords": [
     "小程序",
     "wx",
@@ -26,5 +33,11 @@
   "bugs": {
     "url": "https://github.com/hengshanMWC/wx-axios-promise/issues"
   },
-  "homepage": "https://github.com/hengshanMWC/wx-axios-promise#readme"
+  "homepage": "https://github.com/hengshanMWC/wx-axios-promise#readme",
+  "devDependencies": {
+    "camelcase": "^6.0.0",
+    "rollup": "^2.21.0",
+    "rollup-plugin-terser": "^6.1.0",
+    "validate-npm-package-name": "^3.0.0"
+  }
 }
