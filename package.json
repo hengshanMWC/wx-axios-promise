@@ -34,7 +34,7 @@
   "homepage": "https://github.com/hengshanMWC/wx-axios-promise#readme",
   "devDependencies": {
     "camelcase": "^6.0.0",
-    "rollup": "^2.21.0",
+    "rollup": "^3.29.5",
     "rollup-plugin-terser": "^6.1.0",
     "validate-npm-package-name": "^3.0.0"
   }
